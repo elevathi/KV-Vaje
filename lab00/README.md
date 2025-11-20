@@ -86,8 +86,11 @@ cd ..         # premik na nadrejeni imenik
 
 ✅ **Naloga:**  
 - Premaknite se v domači imenik.
+  cd
 - Ustvarite imenik `linux-vaja`.
+  mkdir linux-vaja
 - Vstopite vanj.
+  cd linux-vaja
 
 ---
 
@@ -103,8 +106,12 @@ rm -r novaMapa         # izbriše imenik z vsebino
 
 ✅ **Naloga:**
 - Ustvarite datoteko `opis.txt` in vanjo zapiši svoje ime.
+  touch opis.txt
+  echo Gregor>opis.txt
 - Ustvarite imenik `testni`.
+  mkdir testni
 - Premaknite `opis.txt` v `testni`.
+  mv opis.txt testni
 
 ---
 
@@ -117,7 +124,9 @@ mv file.txt /pot/do/drugamape/  # premik
 
 ✅ **Naloga:**
 - Preimenujte `opis.txt` v `moj_profil.txt`.
+  mc opis.txt moj_profil.txt
 - Kopirajte `moj_profil.txt` v domačo mapo.
+  cp moj_profil.txt ..\moj_profil.txt
 
 ---
 
@@ -130,7 +139,9 @@ chmod 644 file  # spremeni pravice
 
 ✅ **Naloga:**
 - Preverite velikost vseh datotek v mapi.
+  ls -lh
 - Spremenite pravice datoteki `moj_profil.txt` tako, da je samo za branje za vse.
+  chmod 644 moj_profil.txt
 
 ---
 
@@ -144,8 +155,12 @@ top              # aktivni procesi
 
 ✅ **Naloga:**
 - Ugotovite ime svojega uporabnika in velikost domačega imenika.
+  whoami
+  cd
+  ls -lh
+  
 - Preverite, koliko prostora je na voljo v sistemu.
-
+  df -h
 ---
 
 ## 💡 Dodatna naloga
