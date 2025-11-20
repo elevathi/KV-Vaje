@@ -124,7 +124,7 @@ mv file.txt /pot/do/drugamape/  # premik
 
 ✅ **Naloga:**
 - Preimenujte `opis.txt` v `moj_profil.txt`.
-  mc opis.txt moj_profil.txt
+  mv opis.txt moj_profil.txt
 - Kopirajte `moj_profil.txt` v domačo mapo.
   cp moj_profil.txt ..\moj_profil.txt
 
