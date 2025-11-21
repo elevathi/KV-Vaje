@@ -105,6 +105,7 @@ rm -r novaMapa         # izbriše imenik z vsebino
 ```
 
 ✅ **Naloga:**
+
 - Ustvarite datoteko `opis.txt` in vanjo zapiši svoje ime.
   touch opis.txt
   echo Gregor>opis.txt
