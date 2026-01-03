@@ -1,0 +1,98 @@
+220 mailhog.example ESMTP MailHog
+
+EHLO codespaces-1fbaf2
+
+250-Hello codespaces-1fbaf2
+250-PIPELINING
+250 AUTH PLAIN
+
+MAIL FROM:<ti@example.com>
+
+250 Sender ti@example.com ok
+
+RCPT TO:<test@example.com>
+
+250 Recipient test@example.com ok
+
+DATA
+
+354 End data with <CR><LF>.<CR><LF>
+
+Subject: Codespace SWAKS Test
+
+Pozdrav iz FIS!
+.
+
+250 Ok: queued as YKq_UDPBpQ7LqUlX1-2F3ITpwhumIQDZDVey-IzsULI=@mailhog.example
+
+QUIT
+
+221 Bye
+
+
+220 postfix.local ESMTP Postfix (Debian)
+
+EHLO codespaces-1fbaf2
+
+250-postfix.local
+250-PIPELINING
+250-SIZE
+250-VRFY
+250-ETRN
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-SMTPUTF8
+250 CHUNKING
+
+STARTTLS
+
+220 2.0.0 Ready to start TLS
+
+...........k........*1
+..m.4..
+.g5..%g..... ...5R.....g:Sw.."p.*.zr.V.%......>.......,.0.........+./...$.(.k.#.'.g.
+...9.	...3.....=.<.5./.....u.........
+.........................#...........
+.*.(...........	.
+...........................+........-.....3.&.$... .b.qw..mV4..[.k.~........W@E.~
+.................................................................................................................................................................................................................................
+....z...v..{.{/MOz.Ql.~n......
+.Q..TAC"q.[. ...5R.....g:Sw.."p.*.zr.V.%...........+.....3.$... N.8......(.2.s. :..iAX.e......!M...........8.v>=.t..E
+....XoR}...8.....B.)G.cP...Yf.8.q+Vj_..[<Fft>5.Y..#>U(:
+W.QT.$|.Ee....~..L.d.h9.UB. ..6cm:..=3.{.Nd?..?.;gj.*fjN.?...r&.5....e..B...k..81....,.......hGR..B..r...4.h.7.8:6(n#e)..ty.0.|.n.~......t.Lr...?.S...]Cb}.W@...1Iq. k.1k.A..Z.-......2..eh..d...H.n".R`...D5^.....BBT.[.....'<.r..e.k.G..XX;.>y..As....':.	....lp<.^(yTu....gu...X...>2[...Q.......8;([06R..W.C......i.(.....1&o_gP....i...@{.b.!mkNE.a....R.j.......Xx..X..z#
+...l.kRX...C.7..8..c).+I.'..[>.....\|wL7...	)~....R.........d...$1C........r.....
+...G..>s.....n.....H>..j..*..F
+.=_jf%....
+I.k.V...m.8.8..[Fa..!t&. A{.6.Z;.....m..Y.
+......CQ	...z..l.mF..C.g<.|.P]..=.{.........o.v..pWE....,....p...g..9.%.~....HV=....."...14......N.e....Zu.'.....s\.M&.i).}..pX 3...p
+.e.W%. (M.m..
+...d(.K=..l-...{SL.Ri..G.|......K..r .Q...I..d.....bj.Y/..hq?.y....6..........N..9p./..%!...@..._...d..`...Yz.U.{.wV....	>.h.Z(...i.Q.. ....
+}`.vn.
+5...\ zg6DW.Ff..
+...........m%c..."..S.......T...]....X..\.....f..bW.......z.I....l9M......].X...n.Q.H....].x........6...w...#.mW..|,kNp.1..XVXQM.2T^.'2.HB.@X=..B.....}r.2.b.Q..k.......k.O..b..#....,....q..........E.&-
+=~3'. ..s^..0.M..........3e....,....p_......*B(.5..I...G..L...2..
+..........E..H..EE........!.0i...o;.dU-+..U.?....<.F+....W#c.h._.))M@.Q.BC.8.t..
+......C...gl....{......M...V...~wzW....s;..XG.....).K'....[c.Q..?p..,....z.p....:aq/.)..L.k].'.......y....5]..-....t.R#k3`.d........JF....n.......Mtb....#.....\.....Hz+{&(..*.<..IJdq..Y..F.h_.&g9.RG..m..!...m.dQ..V....Y.UV..zW..._.9...c+.&...0.{.F.*.}.m.O
+....)V..1F..>y.....Nm.Z.k....
+Y..FSN...)I...|.
+.....	'..j........z\1 )~7..o,...r..E.......85.....I......k..U....
+...m.|...M.L..<. ......Vt...*S..Ww...f.6-.~.c.d.M..T........(S.../..,.c....4c./.MF...B.....8
+X<..
+..../....Y....O.
+..R..(...h...8*6.:>,.v...._t.T.....
+.......m..,.ODnd..d.2......O.6:e....
+....-J....U...S.y......	#.3B............p...._.k.F
+....i..R..........]..!h.........,M+..;.tB......R.vUw
+.?:]..U.....ac....].V...M~W.X....j.g
+..3.;...,%#....p...c
+.....S....Z?4qU.....T...F...
+.... u....0?....r.....`...M.-....g........M.|....5^R.bm7..Z..
+
+V prvem vidi sporočilo v drugem pa da je bilo sporočilo poslano.
+PGP fingerprint je edinstven identifikator javnega ključa, ki ga preverimo prek zaupanja vrednega kanala (npr. osebno ali telefonsko), da zagotovimo, da komuniciramo z lastno osebo in ne z napadalcem, ki bi lahko zamenjal njen javni ključ s svojim.
+Kdaj bi uporabili PGP in kdaj Signal? v enem stavku8:48 PMPGP bi uporabili za asinhronno komunikacijo kot je e-pošta, kjer potrebujemo dolgotrajno shranjevanje in podpisovanje sporočil, medtem ko bi Signal uporabili za sinhronno takojšnjo komunikacijo (chat), kjer je pomembna preprostost uporabe in forward secrecy.
+Da, end-to-end šifriranje bi moralo biti privzeto, ker ščiti zasebnost uporabnikov pred vdori, prisluškivanjem in zlorabami brez negativnega vpliva na uporabniško izkušnjo (kot dokazuje Signal), medtem ko njegovi potencialni izzivi pri boju proti kriminalu zahtevajo alternativne preiskovalne metode, ne pa šibkejše varnosti za vse.
+
+
