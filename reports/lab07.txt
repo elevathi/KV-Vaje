@@ -1,0 +1,27 @@
+192.168.227.129 - - [03/Jan/2026 13:59:39] "GET /favicon.ico HTTP/1.1" 404 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: GALX=SJLCkfgaqoM                                                                                                                                                                                                                                                                            
+PARAM: continue=https://accounts.google.com/o/oauth2/auth?zt=ChRsWFBwd2JmV1hIcDhtUFdldzBENhIfVWsxSTdNLW9MdThibW1TMFQzVUZFc1BBaURuWmlRSQ%E2%88%99APsBz4gAAAAAUy4_qD7Hbfz38w8kxnaNouLcRiD3YTjX                                                                                                       
+PARAM: service=lso                                                                                                                                                                                                                                                                                 
+PARAM: dsh=-7381887106725792428                                                                                                                                                                                                                                                                    
+PARAM: _utf8=â                                                                                                                                                                                                                                                                                     
+PARAM: bgresponse=js_disabled                                                                                                                                                                                                                                                                      
+PARAM: pstMsg=1                                                                                                                                                                                                                                                                                    
+PARAM: dnConn=                                                                                                                                                                                                                                                                                     
+PARAM: checkConnection=                                                                                                                                                                                                                                                                            
+PARAM: checkedDomains=youtube                                                                                                                                                                                                                                                                      
+POSSIBLE USERNAME FIELD FOUND: Email=Test                                                                                                                                                                                                                                                          
+POSSIBLE PASSWORD FIELD FOUND: Passwd=Test1234567890_____                                                                                                                                                                                                                                          
+PARAM: signIn=Sign+in                                                                                                                                                                                                                                                                              
+PARAM: PersistentCookie=yes                                                                                                                                                                                                                                                                        
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.  
+
+Phishing strani prepoznamo predvsem po prirejenih ali sumljivih URL naslovih,
+ ki posnemajo prave domene, ter po vsebini,
+  ki z nujnostjo ali grožnjami sili uporabnika v vnašanje osebnih podatkov
+   na vizualno sumljivih spletnih obrazcih.
+
+Uporabljen je bil template ker ni hotel klonirat strani.
+Prepoznava bi lahko bila po čudnih fontih ter po tem da se po prijavi ne zgodi nič.
+
+Sedaj vem kako bom prišel do gesel za netflix.
