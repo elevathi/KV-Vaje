@@ -1,0 +1,35 @@
+1. Zakaj skrivnosti ne sodijo v izvorno kodo?
+Varnostna gesla, API ključi in certifikati ne smejo biti v kodi iz več kritičnih razlogov:
+
+Zgodovina verzij: Tudi če skrivnost kasneje izbrišete, ostane zapisana v zgodovini (npr. Git history). Vsak, ki ima dostop do repozitorija, jo lahko najde.
+
+Širjenje dostopa: Koda se pogosto kopira na lokalne računalnike razvijalcev, strežnike za testiranje in v oblak. Več mest kot ima dostop do kode, večja je verjetnost kraje skrivnosti.
+
+Težko rotiranje: Če je geslo v kodi, zahteva vsaka sprememba gesla nov "commit", ponovno prevajanje in namestitev aplikacije.
+
+2. Razlika med simetričnim in asimetričnim šifriranjem
+Glavna razlika je v številu ključev:
+
+Simetrično: Uporablja isti ključ za šifriranje in dešifriranje (npr. AES). Je izjemno hitro, vendar je težava v tem, kako varno dostaviti ta ključ vsem vpletenim stranem.
+
+Asimetrično: Uporablja par ključev – javnega za šifriranje in zasebnega za dešifriranje (npr. RSA). Je počasnejše, a varnejše za komunikacijo med neznanci, saj zasebnega ključa nikoli ne delite.
+
+3. Kaj se zgodi, če izgubimo zasebni ključ?
+Izguba zasebnega ključa je brez ustrezne priprave katastrofalna:
+
+Izguba dostopa: Podatkov, šifriranih s pripadajočim javnim ključem, ni več mogoče dešifrirati. Postanejo trajno neuporabni.
+
+Onemogočen podpis: Ne morete več dokazati svoje identitete ali digitalno podpisovati dokumentov/kode.
+
+Preklic: Če imate pripravljen preklicni certifikat (revocation certificate), lahko javnost obvestite, da ključ ni več veljaven, sicer pa ljudje lahko še naprej pošiljajo šifrirane podatke na "mrtvi" ključ.
+
+4. Kako bi to rešili v večjem podjetju?
+Podjetja ne preprosto "hranijo ključev na USB ključkih", temveč uporabljajo profesionalne sisteme:
+
+Secrets Management sistemi: Orodja kot so HashiCorp Vault, AWS Secrets Manager ali Azure Key Vault, ki centralizirano hranijo skrivnosti in beležijo dostope.
+
+HSM (Hardware Security Module): Posebna strojna oprema, ki fizično varuje ključe tako, da ti nikoli ne zapustijo naprave v berljivi obliki.
+
+RBAC (Role-Based Access Control): Razvijalci nimajo neposrednega dostopa do produkcijskih gesel; aplikacija jih samodejno pridobi ob zagonu glede na svojo identiteto.
+
+Key Escrow / Backup: Strogo varovane varnostne kopije ključev, razdeljene med več odgovornih oseb (npr. po Shamirjevi metodi), da se prepreči izguba v primeru nesreče.
