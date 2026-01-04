@@ -1,0 +1,42 @@
+1. Zakaj GPG ne zazna MITM napada samodejno?
+GPG (GnuPG) je le orodje za šifriranje. Samodejno ne more vedeti, ali javni ključ, ki ste ga prenesli s spleta, resnično pripada osebi, za katero se izdaja. Napadalec lahko v sredino (Man-in-the-Middle) postavi svoj javni ključ z lažnim imenom. GPG bo tehnično pravilno zašifriral sporočilo s tem ključem, vendar ga bo lahko odšifriral le napadalec, ne pa pravi prejemnik.
+
+2. Kaj je fingerprint in zakaj je pomemben?
+Fingerprint (prstni odtis) je krajša, edinstvena niz znakov (npr. v obliki heksadecimalnih števil), ki je ustvarjena iz javnega ključa s pomočjo zgoščevalne funkcije (hash).
+
+Pomembnost: Ker so javni ključi dolgi in nepregledni, fingerprint omogoča ljudem, da ročno preverijo, ali imajo pravi ključ. Če se fingerprinta ujemata, je ključ avtentičen.
+
+3. Zakaj e-pošta ni varen kanal za izmenjavo ključev?
+E-pošta privzeto potuje v nešifrirani obliki preko številnih strežnikov. Napadalec lahko:
+
+Prestrezanje: Prestreže e-pošto in zamenja vaš javni ključ s svojim.
+
+Spreminjanje: Vi mislite, da ste poslali svoj ključ, prejemnik pa prejme napadalčevega, ne da bi kateri od vaju to opazil (klasičen MITM napad).
+
+4. Kako Web of Trust (Mreža zaupanja) zmanjša tveganje MITM?
+Web of Trust (WoT) temelji na decentraliziranem potrjevanju identitete:
+
+Podpisovanje ključev: Ko nekomu zaupate in preverite njegovo identiteto v živo, podpišete njegov javni ključ s svojim zasebnim ključem.
+
+Veriga zaupanja: Če vi zaupate osebi A in oseba A podpiše ključ osebe B, lahko vaš GPG program na podlagi te povezave oceni, da je ključ osebe B verodostojen, čeprav je osebno ne poznate. S tem se močno oteži MITM, saj bi moral napadalec ponarediti celotno mrežo podpisov.
+
+1. Podpisan ključ (Signed Key)
+To je objektivno potrdilo o identiteti. Ko podpišete tuj ključ, svetu (in svojemu računalniku) sporočate: "Preveril sem (npr. z vpogledom v osebni dokument), da ta javni ključ dejansko pripada osebi, ki je navedena v ID-ju ključa."
+
+Kaj naredi: Ključ postane v vašem sistemu "veljaven" (valid).
+
+Ali se širi? Da. Če svoj podpis izvozite, ga lahko vidijo tudi drugi.
+
+2. Zaupanje (Trust / Owner Trust)
+To je subjektivna ocena zanesljivosti lastnika. Ko nekomu dodelite določeno stopnjo zaupanja (npr. Full Trust ali Marginal Trust), ne potrjujete le njegove identitete, temveč njegovo sposobnost preverjanja drugih.
+
+Kaj naredi: Pove GPG-ju, naj verjame podpisom, ki jih je ta oseba dala drugim ključem. Če polno zaupate osebi A, bo GPG samodejno priznal veljavnost osebe B, če jo je oseba A podpisala.
+
+Ali se širi? Ne. To je vaša lokalna nastavitev in se nikoli ne pošilja na strežnike ali drugim osebam.
+
+3. Ultimativno zaupanje (Ultimate Trust)
+To je najvišja stopnja zaupanja, ki je običajno rezervirana le za vaše lastne ključe.
+
+Pomen: Pomeni, da ključu zaupate brez kakršnih koli pogojev. Vsak ključ, ki ga vi podpišete s svojim "ultimativno zaupanim" ključem, postane za vaš sistem takoj legitimen.
+
+Vloga: Je koren (root) vaše osebne mreže zaupanja, iz katere se zaupanje širi naprej na druge.
