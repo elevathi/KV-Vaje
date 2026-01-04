@@ -102,7 +102,3 @@ base64 -d data.txt
 ssh bandit11@bandit.labs.overthewire.org -p 2220
 tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt 
 # password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
-```
-
-# Level 12
- 
