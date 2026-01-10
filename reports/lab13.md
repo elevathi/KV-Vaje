@@ -1,56 +1,98 @@
-# Lab 13 - Projektna naloga: Sistemski ali zunanji varnostni pregled
+# Lab 13 - Projektna naloga: Zunanji varnostni kibernetski pregled
 
-> **Opomba:** Porocilo za to projektno nalogo ni bilo oddano.
+> **Status:** Projektna naloga oddana na Moodle (januar 2026)
 
-## Povzetek naloge
+## Osnovni podatki
 
-### Namen
-Pripraviti celovito porocilo sistemskega ali zunanjega varnostnega pregleda v vlogi IT strokovnjaka za informacijsko varnost.
+| Podatek | Vrednost |
+|---------|----------|
+| Organizacija | Premogovnik Velenje d.o.o. |
+| Vrsta pregleda | Zunanji varnostni kibernetski pregled |
+| Datum pregleda | 6. - 10. januar 2026 |
+| Izvajalec | Gregor Klinc |
+| Obseg strani | 48 strani |
 
-### Cilji
-- Identifikacija sredstev, grozenj in ranljivosti
-- Izvajanje osnovnih varnostnih testov z orodji
-- Priprava porocila in priporocil na podlagi analiz
+## Povzetek
 
-## Struktura porocila
+Zunanji varnostni kibernetski pregled organizacije Premogovnik Velenje d.o.o., ki se ukvarja z izkopom premoga. Pregled je bil izveden z namenom identifikacije potencialnih varnostnih ranljivosti in priprave priporocil za izboljsanje kibernetske varnosti.
 
-1. **Povzetek** - opis ciljev in obsega pregleda
-2. **Cilji** - kaj zelimo doseci
-3. **Sodelujoci** - kdo sodeluje pri projektu
-4. **Izjava o dovoljenju za testiranje**
-5. **Metodologija** - opis pristopa, ocenjevanje tveganj
-6. **Casovnica** - faze in cas izvedbe
-7. **Identifikacija sredstev** - strojna, programska oprema, uporabniki, podatki
-8. **Identifikacija grozenj** - naravne, tehnicne, cloveske
-9. **Identifikacija ranljivosti** - zastareli sistemi, napacne nastavitve
-10. **Identifikacija nadzora** - obstojeci tehnicni in organizacijski ukrepi
-11. **Interni pregled organizacije in sistema**
-12. **Analiza informacijskega sistema**
-13. **Porocilo o varnosti IT** - tabela s tveganji in ukrepi
-14. **Priloge: testiranja z orodji** (vsaj 3):
-    - WHOIS / DNS / Mail test (mxtoolbox.com)
-    - SSL test (ssllabs.com)
-    - Odprta vrata (nmap)
-    - CMS analiza (pentest-tools.com)
-    - Iskanje podatkov (haveibeenpwned.com)
-15. **Priporocila in povratne informacije**
-16. **Informacije o avtorju**
+## Metodologija
 
-## Kriteriji ocenjevanja (100 tock)
+### Pristop
+- OSINT (Open Source Intelligence) preiskava
+- Skeniranje omrezja in storitev
+- Analiza SSL/TLS konfiguracij
+- Pregled DNS zapisov
+- Testiranje e-postnih streznikov
 
-| Kriterij | Tocke |
-|----------|-------|
-| Povzetek, cilji, obseg | 10 |
-| Metodologija | 10 |
-| Identifikacija sredstev/grozenj/ranljivosti | 15 |
-| Analiza internega pregleda | 10 |
-| Izvedba varnostnih testov (vsaj 3) | 20 |
-| Analiza rezultatov in priporocila | 10 |
-| Struktura, jezik, slog | 10 |
-| Priloge in dokazila | 10 |
-| Upostevanje navodil | 5 |
+### Uporabljena orodja
+1. **Nmap** - skeniranje odprtih vrat in storitev
+2. **SSL Labs** - analiza SSL/TLS konfiguracij
+3. **MXToolbox** - pregled DNS in e-postnih nastavitev
+4. **WHOIS** - pregled domenskih podatkov
+5. **Shodan** - pregled javno dostopnih naprav
+6. **Have I Been Pwned** - preverjanje uhajanja podatkov
 
-## TODO
-- [ ] Izbrati cilni sistem (dejanski ali fiktiven)
-- [ ] Izvesti varnostne teste z orodji
-- [ ] Pripraviti porocilo (5-10 strani)
+## Identificirana sredstva
+
+### Infrastruktura
+- Glavni spletni streznik (rlv.si)
+- E-postni streznik
+- VPN dostop
+- Interna omrezna infrastruktura
+
+### Digitalna prisotnost
+- Glavna domena: rlv.si
+- Poddomena: www.rlv.si
+- E-postna infrastruktura
+
+## Kljucne ugotovitve
+
+### Pozitivno
+- SSL certifikat pravilno konfiguriran
+- Osnovne varnostne nastavitve prisotne
+- SPF zapisi konfigurirani
+
+### Ranljivosti in pomanjkljivosti
+1. **Zastarele programske komponente** - nekateri sistemi potrebujejo posodobitve
+2. **E-postna varnost** - moznost izboljsav DMARC politik
+3. **Odprta vrata** - nekaj nepotrebno odprtih storitev
+4. **Informacijsko razkrivanje** - pretirano razkrivanje tehnicnih podrobnosti
+
+## Ocena tveganja
+
+| Kategorija | Stopnja tveganja |
+|------------|------------------|
+| Zunanja izpostavljenost | Srednja |
+| E-postna varnost | Srednja |
+| SSL/TLS konfiguracija | Nizka |
+| Upravljanje posodobitev | Srednja-Visoka |
+
+## Priporocila
+
+### Takojsnji ukrepi
+1. Posodobitev zastarelih sistemov
+2. Zapiranje nepotrebnih vrat in storitev
+3. Implementacija strozjih DMARC politik
+
+### Srednjerocni ukrepi
+1. Redno skeniranje ranljivosti
+2. Implementacija WAF (Web Application Firewall)
+3. Izboljsanje nadzora in belezenja
+
+### Dolgorocni ukrepi
+1. Vzpostavitev programa za upravljanje ranljivosti
+2. Redno izvajanje penetracijskih testov
+3. Usposabljanje zaposlenih o kibernetski varnosti
+
+## Zakljucek
+
+Pregled je pokazal, da organizacija Premogovnik Velenje ima vzpostavljene osnovne varnostne mehanizme, vendar obstaja prostor za izboljsave. Priporoceno je redno izvajanje varnostnih pregledov in takojsnja implementacija predlaganih ukrepov.
+
+## Priloge
+
+Podrobno porocilo s posnetki zaslona in tehnicnimi podrobnostmi je prilozeno v PDF dokumentu, oddanem na Moodle.
+
+---
+
+*Porocilo pripravljeno v okviru predmeta Kibernetska varnost*
